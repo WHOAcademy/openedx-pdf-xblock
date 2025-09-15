@@ -16,7 +16,6 @@ loader = ResourceLoader(__name__)
 @XBlock.wants('settings')
 @XBlock.needs('i18n')
 class PdfBlock(
-    ScorableXBlockMixin,
     XBlock,
     XBlockWithSettingsMixin,
     ThemableXBlockMixin
