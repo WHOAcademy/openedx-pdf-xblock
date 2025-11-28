@@ -90,6 +90,13 @@ class PdfBlock(
     '''
     Main functions
     '''
+    def public_view(self, context=None):
+        """
+        Render for anonymous / unenrolled users.
+        This is required for public course content mode.
+        """
+        return self.student_view(context)
+
     def student_view(self, context=None):
         """
         The primary view of the XBlock, shown to students
